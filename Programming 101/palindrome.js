@@ -8,6 +8,7 @@
 //         num=Math.floor(num/10);
 
 //     }
+    
 //     if(copy==result){
 //         return "Num is Palindrome"
 //     }
@@ -16,7 +17,7 @@
 //     }
 
 // }
-// let res=palindrome(421);
+// let res=palindrome(-121);
 // console.log(res);
 
 // /**

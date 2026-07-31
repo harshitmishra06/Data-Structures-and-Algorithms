@@ -89,11 +89,15 @@
 // console.log(val);
 
 
-/*---------------------Factorial of n -------------------------------*/
 
-function mul(n){
-    if(n==0) return 1;
-    return n* mul(n-1);
+// ---------------------------------------------------
+
+function sum(n){
+    if(n==0) return 0;
+    return n+ sum(n-1);
 }
-const val=mul(5);
+const val=sum(5);
 console.log(val);
+
+
+

@@ -10,4 +10,3 @@ var reverseList = function(head) {
     return pre;
     
 };
-git 

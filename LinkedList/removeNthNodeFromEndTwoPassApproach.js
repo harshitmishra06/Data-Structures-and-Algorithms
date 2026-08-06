@@ -8,7 +8,7 @@ var removeNthFromEnd = function (head, n) {
         curr = curr.next
         length++;
     }
-    let pos = length - n;
+    
     for (let i = 0; i < length - n; i++) {
         prev = prev.next;
     }

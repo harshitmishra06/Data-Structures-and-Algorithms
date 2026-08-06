@@ -1,19 +1,14 @@
-function Node(val) {
+var Node = function (val) {
   this.val = val;
   this.next = null;
-}
+};
 var MyLinkedList = function () {
   this.head = null;
   this.size = 0;
 };
 
-/**
- * @param {number} index
- * @return {number}
- */
 MyLinkedList.prototype.get = function (index) {
-  //  if (index == 0) return this.head;
-  if (index < 0 || index > this.size) return -1;
+  if (index < 0 || index >= this.size) return -1;
   let curr = this.head;
   for (let i = 0; i < index; i++) {
     curr = curr.next;
@@ -28,7 +23,6 @@ MyLinkedList.prototype.get = function (index) {
 MyLinkedList.prototype.addAtHead = function (val) {
   let newNode = new Node(val);
   newNode.next = this.head;
-
   this.head = newNode;
   this.size++;
 };
@@ -39,12 +33,11 @@ MyLinkedList.prototype.addAtHead = function (val) {
  */
 MyLinkedList.prototype.addAtTail = function (val) {
   let newNode = new Node(val);
-  if (this.head == null) {
+  if (this.head === null) {
     this.head = newNode;
     this.size++;
     return;
   }
-
   let curr = this.head;
   while (curr.next !== null) {
     curr = curr.next;
@@ -92,3 +85,13 @@ MyLinkedList.prototype.deleteAtIndex = function (index) {
   }
   this.size--;
 };
+
+/**
+ * Your MyLinkedList object will be instantiated and called as such:
+ * var obj = new MyLinkedList()
+ * var param_1 = obj.get(index)
+ * obj.addAtHead(val)
+ * obj.addAtTail(val)
+ * obj.addAtIndex(index,val)
+ * obj.deleteAtIndex(index)
+ */

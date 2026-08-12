@@ -60,4 +60,4 @@ var lengthOfLastWord = function (s) {
 
 /*-------------Method 4------------------------------*/
 
-  
+

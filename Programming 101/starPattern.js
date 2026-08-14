@@ -102,3 +102,17 @@
 //   }
 // }
 // printSeries6(5);
+
+
+function printSeries(n){
+   
+    for(let i=0;i<n;i++){
+        let str="";
+        for(let j=1;j<=i+1;j++){
+            str=str+String.fromCharCode(64+j)
+        }
+        console.log(str);
+    }
+    
+}
+let res=printSeries(5);

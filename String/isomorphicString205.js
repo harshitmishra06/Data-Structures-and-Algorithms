@@ -13,7 +13,7 @@
 //   for(let char of t)
 // };
 
-/*---------------------------------------------*/
+/*------------------using two maps---------------------------*/
 var isIsomorphic = function (s, t) {
   if (s.length !== t.length) return false;
 
@@ -34,6 +34,37 @@ var isIsomorphic = function (s, t) {
 
     mapS.set(charS, charT);
     mapT.set(charT, charS);
+  }
+
+  return true;
+};
+
+/*---------------Using one set and one map--------------*/
+
+var isIsomorphic = function (s, t) {
+  if (s.length !== t.length) return false;
+
+  let map = new Map();
+  let set = new Set();
+
+  for (let i = 0; i < s.length; i++) {
+    let charS = s[i];
+    let charT = t[i];
+
+    // s character already has a mapping
+    if (map.has(charS)) {
+      if (map.get(charS) !== charT) {
+        return false;
+      }
+    } else {
+      // t character is already mapped to another s character
+      if (set.has(charT)) {
+        return false;
+      }
+
+      map.set(charS, charT);
+      set.add(charT);
+    }
   }
 
   return true;

@@ -1,0 +1,3 @@
+in javascript it donot have its own stack and queues so it uses array for both stack and queues.
+in stack do not use index access to access the stack elements.
+in queues do use pop function

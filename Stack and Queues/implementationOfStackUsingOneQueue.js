@@ -4,10 +4,7 @@ var MyStack = function () {
     this.queue2 = [];
 };
 
-/** 
- * @param {number} x
- * @return {void}
- */
+
 MyStack.prototype.push = function (x) {
     this.queue1.push(x);
 };
@@ -25,9 +22,7 @@ MyStack.prototype.pop = function () {
     return res;
 };
 
-/**
- * @return {number}
- */
+
 MyStack.prototype.top = function () {
     let n = this.queue1.length - 1;
     for (let i = 0; i < n; i++) {
@@ -39,9 +34,6 @@ MyStack.prototype.top = function () {
     return res;
 };
 
-/**
- * @return {boolean}
- */
 MyStack.prototype.empty = function () {
 if(this.queue1.length==0)return true;
 else return false;

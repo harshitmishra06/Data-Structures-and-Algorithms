@@ -16,3 +16,9 @@ var removeOuterParentheses = function (s) {
   }
   return ans;
 };
+
+
+/*---------------------
+Time complexity = O(n)
+space complexity= O(n)
+---------------------*/

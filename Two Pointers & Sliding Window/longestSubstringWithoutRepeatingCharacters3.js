@@ -13,6 +13,7 @@ var lengthOfLongestSubstring = function (s) {
     map.set(s[j], j);
     currWS = j - i + 1;
     maxWS = Math.max(maxWS, currWS);
+    
   }
   return maxWS;
 };

@@ -65,3 +65,7 @@ var isWindowValid = function (arr, k) {
   }
   return totalCount - maxCount <= k;
 };
+
+
+// time complexity=O(n*m)=O(n); m=26
+// space complexity=O(m)

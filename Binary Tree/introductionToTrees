@@ -1,0 +1,9 @@
+Tree is -:
+non linear
+hierarchial
+can't have cycles
+exactly one path between two nodes
+no two parents can have same child
+can have 0 , 1 or atmost two children
+
+Examples-:  File systems , html doms , database , hierarchial data.

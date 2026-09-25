@@ -1,12 +1,11 @@
-// recursive approach
+// Recursive Approach
 
-var preorderTraversal = function (root) {
+var inorderTraversal = function (root) {
     let ans = [];
-
     function traversal(curr) {
         if (!curr) return;
-        ans.push(curr.val);
         traversal(curr.left);
+        ans.push(curr.val);
         traversal(curr.right);
     };
     traversal(root);

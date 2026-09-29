@@ -1,3 +1,5 @@
+// Iterative Approach using two stack
+
 var postorderTraversal = function (root) {
   if (!root) return [];
   let ans = [];
@@ -15,3 +17,10 @@ var postorderTraversal = function (root) {
   }
   return ans;
 };
+
+
+// ---------------------------------------------------------------------------------------------------------
+
+// Iterative Approach using one stack
+
+

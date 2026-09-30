@@ -23,3 +23,18 @@ var levelOrder = function (root) {
 
 // Recursive Approach
 
+var levelOrder = function (root) {
+  let ans = [];
+
+  function traversal(curr, level) {
+    if (!curr) return;
+    if (!ans[level]) {
+      ans[level] = [];
+    }
+    ans[level].push(curr.val);
+    traversal(curr.left, level + 1);
+    traversal(curr.right, level + 1);
+  }
+  traversal(root, 0);
+  return ans;
+};

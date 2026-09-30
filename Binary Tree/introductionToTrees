@@ -7,3 +7,20 @@ no two parents can have same child
 can have 0 , 1 or atmost two children
 
 Examples-:  File systems , html doms , database , hierarchial data.
+
+---------------------------------------------------------------------------------------------------------
+
+DFS Vs BFS -:
+----------------
+
+1-Depth First Search(DFS):- DFS explores a tree by going as deep as possible along a branch before backtracking.
+-Preorder Traversal
+-Inorder Traversal
+-Postorder Traversal
+
+2-Breadth First Search(BFS):- Explore the tree level by level, explore all nodes current level before moving deeper.
+-Level Order Traversal
+-Zig-zag Traversal(same as level order just direction changes after each level)
+
+
+

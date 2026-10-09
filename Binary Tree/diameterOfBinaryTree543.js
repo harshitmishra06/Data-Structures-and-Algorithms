@@ -16,4 +16,13 @@ var diameterOfBinaryTree = function (root) {
 };
 
 
-// solved usinig bottom -up approach
+//   solved usinig bottom -up approach
+//   calculate children
+//   ↓
+//   get their heights
+//   ↓
+//   calculate current diameter
+//   ↓
+//   update maxDiameter
+//   ↓
+//   return current height

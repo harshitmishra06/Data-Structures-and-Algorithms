@@ -1,0 +1,1 @@
+// write a code to see the visible part of tree if one is stading in right side

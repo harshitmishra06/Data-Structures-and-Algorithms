@@ -1,0 +1,1 @@
+// A "good node" in a binary tree is a node whose value is greater than or equal to every other node's value along the path from the root down to that node

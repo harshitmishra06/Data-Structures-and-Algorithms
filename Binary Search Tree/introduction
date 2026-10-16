@@ -1,0 +1,9 @@
+BINARY SEARCH TREE :- 
+
+A Binary Search Tree (BST) is a node-based data structure in computer science where each node has a comparable key and at most two children, organized by a strict ordering rule.
+
+Core Property:-
+
+• Left Subtree: All values in a node's left subtree are strictly less than (or less than or equal to, depending on implementation) the node's key.
+• Right Subtree: All values in a node's right subtree are strictly greater than the node's key.
+• Subtree Requirement: Every left and right subtree must also be a valid binary search tree

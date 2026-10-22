@@ -1,3 +1,11 @@
+Complete Binary Tree:- a complete binary tree is a tree which is completely fill except possibily last level.Nodes at the last level are as far left as possibile.
+
+Basically if you are doing level order traversal there shouldn't be any blank spot.
+
+Full Tree:- At each level all nodes are present.
+
+
+
 A priority queue is an abstract data type where elements are processed by priority rather than arrival order. A binary heap is a complete binary tree data structure that implements a priority queue efficiently in \(O(\log n)\) time.
 
 Priority Queue Concepts
@@ -10,6 +18,13 @@ Priority Queue Concepts
 	• peek() / top(): Views the highest-priority element without removing it.
 
 Heap Concepts
+
+All heaps are complete binary tree.
+Time-Complexity of heap :- Insert = O(log n)
+                           Delete = O(log n)
+        
+In max-heap to find the largest element time-complexity is O(1).
+In min-heap to find the smallest element time-complexity is O(1).
 
 • Definition: A specialized tree-based data structure used to back priority queues.
 • Shape Property: A complete binary tree where every level is full except possibly the last, which fills from left to right.

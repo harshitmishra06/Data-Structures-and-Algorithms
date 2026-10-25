@@ -34,7 +34,7 @@ In min-heap to find the smallest element time-complexity is O(1).
 • Array Storage: Heaps use a contiguous array instead of pointer nodes. For a node at index i:
 	• Left child is at 2 * i + 1 (or 2 * i if 1-indexed).
 	• Right child is at 2 * i + 2 (or 2 * i + 1 if 1-indexed).
-	• Parent is at floor((i - 1) / 2).
+	• Parent is at floor((i - 1) / 2) or (floor of i/2 if 1-indexed).
 
 Heap Maintenance Operations
 

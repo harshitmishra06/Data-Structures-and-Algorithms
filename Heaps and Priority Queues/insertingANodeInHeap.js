@@ -43,6 +43,4 @@ let heap = new MinHeap();
 heap.insert(1);
 console.log(heap);
 
-
-
 // Time-Complexity of Insertion in Heap = O(log n)

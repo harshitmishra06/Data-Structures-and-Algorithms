@@ -1,0 +1,140 @@
+// IMPLEMENTATION OF PRIORITY QUEUES :-
+//-----------------------------------------------
+
+// We can use heap-data structure to implement a priority queue.
+// Higher the value higher the priority use max-heap.
+// Minimum the value higher the priority use min-heap.
+
+//  Javascript does not have built-in priority queue/Heap. You have to write your own implementation.
+
+
+
+
+// Implementation of Prioroty Queue using sorting :-(not the most efficient way)
+
+class PriorityQueue {
+  constructor() {
+    this.queue = [];
+  }
+
+  enqueue(value, priority) {
+    this.queue.push({ value, priority });
+    this.queue.sort((a, b) => b.priority - a.priority); // highest priority first.
+  }
+
+  dequeue() {
+    return this.queue.shift(); // rremoves the first element from queue.
+  }
+
+  peek() {
+    return this.queue[0];
+  }
+
+  isEmpty() {
+    return this.queue.length === 0;
+  }
+}
+
+// Demo
+
+const pq = new PriorityQueue();
+pq.enqueue("Fever", 1);
+pq.enqueue("Accident", 5);
+pq.enqueue("Headache", 2);
+
+console.log(pq.dequeue());
+console.log(pq.dequeue());
+console.log(pq.dequeue());
+
+
+
+
+
+// ====================Implementation using Heap=========================================
+
+
+
+
+class PriorityQueueUsingHeap {
+  constructor() {
+    this.heap = [];
+  }
+
+  enqueue(value, priority) {
+    this.heap.push({ value, priority });
+    this.heapifyUp();
+  }
+
+  // Move new node up
+
+  heapifyUp() {
+    let index = this.heap.length - 1;
+    while (index > 0) {
+      let parent = Math.floor((index - 1) / 2);
+      if (this.heap[index].priority <= this.heap[parent].priority) break;
+      this.swap(index, parent);
+      index = parent;
+    }
+  }
+
+  // dequeue highest priority item
+
+  dequeue() {
+    if (this.heap.length === 0) return null;
+    const max = this.heap[0];
+    const end = this.heap.pop();
+    if (this.heap.length > 0) {
+      this.heap[0] = end;
+      this.heapifyDown();
+    }
+    return max;
+  }
+
+  // Restore heap Downwards
+
+  heapifyDown() {
+    let index = 0;
+    let length = this.heap.length;
+    while (true) {
+      let left = 2 * index + 1;
+      let right = 2 * index + 2;
+      let largest = index;
+
+      if (
+        left < length &&
+        this.heap[left].priority > this.heap[largest].priority
+      ) {
+        largest = left;
+      }
+      if (
+        right < length &&
+        this.heap[right].priority > this.heap[largest].priority
+      ) {
+        largest = right;
+      }
+      if (largest === index) break;
+      this.swap(index, largest);
+      index = largest;
+    }
+  }
+
+  // View front item
+  front() {
+    return this.heap.length > 0 ? this.heap[0] : null;
+  }
+
+  size() {
+    return this.heap.length;
+  }
+
+  // isEmpty
+  isEmpty() {
+    return this.heap.length === 0;
+  }
+
+  // swap helper
+
+  swap(i, j) {
+    [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
+  }
+}

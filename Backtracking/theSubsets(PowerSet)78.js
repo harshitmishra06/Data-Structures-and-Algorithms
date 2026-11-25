@@ -12,3 +12,7 @@ var subsets = function (nums) {
   backtrack([], 0);
   return result;
 };
+
+
+// Time-Complexity= O(n.2^n)
+// Nodes = 2^n
